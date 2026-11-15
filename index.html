@@ -121,6 +121,10 @@
   .cat.big .n{font-weight:700;font-size:18px}
   .cat.big .d{flex-basis:100%;order:3}
   .wide{grid-column:1/-1}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px 16px!important}
+  .chips li{display:block!important;padding:6px 12px!important;border:0!important;border-radius:999px;background:var(--c);font-weight:500;font-size:15px}
+  .wide-half{grid-column:1/-1}
+  @media (min-width:821px){.wide-half ul{columns:2;column-gap:36px}.wide-half li{break-inside:avoid}}
   .fineprint{font-size:14px;color:var(--muted);margin-top:24px}
 
   /* visit */
@@ -212,79 +216,84 @@
     <p class="sub">Fiyatlar Türk lirasıdır. Rezervasyon ve bilgi için arayın.</p>
 
     <nav class="tabs" aria-label="Menü bölümleri">
-      <a href="#kahvalti" style="--c:var(--butter)">Kahvaltı</a>
+      <a href="#kahvalti" style="--c:var(--teal)">Kahvaltı</a>
       <a href="#yancilar" style="--c:var(--butter)">Yumurtalar</a>
       <a href="#fastfood" style="--c:#F3EDB8">Tost &amp; burger</a>
       <a href="#makarna" style="--c:var(--rose)">Makarnalar</a>
       <a href="#ozel" style="--c:var(--rose)">Cafer'e özel</a>
       <a href="#salata" style="--c:var(--teal)">Salatalar</a>
+      <a href="#tatli" style="--c:var(--rose)">Tatlılar</a>
+      <a href="#sicak" style="--c:var(--rose)">Sıcak içecekler</a>
+      <a href="#kahve" style="--c:var(--butter)">Kahveler</a>
+      <a href="#buzlu" style="--c:#F3EDB8">Buzlular</a>
+      <a href="#mesrubat" style="--c:var(--teal)">Meşrubatlar</a>
     </nav>
 
     <div class="cols">
       <article class="cat big wide" id="kahvalti" style="--c:var(--teal)">
         <h3>Kahvaltı</h3>
         <ul>
-          <li><span class="n">Kahvaltıcık</span><span class="lead"></span><span class="p">250 ₺</span>
+          <li><span class="n">Kahvaltıcık</span><span class="lead"></span><span class="p">290 ₺</span>
             <span class="d">Peynir, zeytin, kaşar, bal, tereyağı, domates, salatalık, cips, simit, bir fincan çay</span></li>
-          <li><span class="n">Kahvaltı tabağı</span><span class="lead"></span><span class="p">350 ₺</span>
+          <li><span class="n">Kahvaltı tabağı</span><span class="lead"></span><span class="p">400 ₺</span>
             <span class="d">Peynir, zeytin, haşlanmış yumurta, kaşar, salam, börek, cips, lokma, domates, salatalık, tereyağı, bal, reçel, Nutella, salça, simit, iki fincan çay</span></li>
-          <li><span class="n">Cafer'in serpmesi</span><span class="lead"></span><span class="p">1100 ₺</span>
-            <span class="d">Peynir, zeytin, kaşar, salam, börek, tereyağı, bal, reçel, Nutella, salça, domates, salatalık, kuru meyve, pankek, lokma, zeytin salatası, cips, ekşimikli biber, sütlü biber, meyve, menemen, simit, sınırsız çay. En az iki kişilik hazırlanır, kişi başı 550 ₺.</span></li>
+          <li><span class="n">Cafer'in serpmesi</span><span class="lead"></span><span class="p">1200 ₺</span>
+            <span class="d">Peynir, zeytin, kaşar, salam, börek, tereyağı, bal, reçel, Nutella, salça, domates, salatalık, kuru meyve, pankek, lokma, zeytin salatası, cips, ekşimikli biber, sütlü biber, meyve, menemen, simit, sınırsız çay. En az iki kişilik, kişi sayısına göre hazırlanır; kişi başı 600 ₺.</span></li>
         </ul>
       </article>
 
       <article class="cat" id="yancilar" style="--c:var(--butter)">
         <h3>Yumurtalar &amp; yancılar</h3>
         <ul>
-          <li><span class="n">Omlet</span><span class="lead"></span><span class="p">170 ₺</span></li>
-          <li><span class="n">Kaşarlı omlet</span><span class="lead"></span><span class="p">220 ₺</span></li>
-          <li><span class="n">Patatesli omlet</span><span class="lead"></span><span class="p">220 ₺</span></li>
-          <li><span class="n">Sebzeli omlet</span><span class="lead"></span><span class="p">220 ₺</span></li>
-          <li><span class="n">Sahanda yumurta</span><span class="lead"></span><span class="p">170 ₺</span></li>
-          <li><span class="n">Menemen<span class="d">Mevsim domatesinden</span></span><span class="lead"></span><span class="p">200 ₺</span></li>
-          <li><span class="n">Lüks menemen</span><span class="lead"></span><span class="p">240 ₺</span></li>
-          <li><span class="n">Sucuklu yumurta<span class="d">%100 dana sucuğundan</span></span><span class="lead"></span><span class="p">240 ₺</span></li>
-          <li><span class="n">Lokma tabağı<span class="d">Beyaz peynir, domates, salatalık ile</span></span><span class="lead"></span><span class="p">270 ₺</span></li>
-          <li><span class="n">Yumurtalı ekmek tabağı<span class="d">Beyaz peynir, domates, salatalık ile</span></span><span class="lead"></span><span class="p">270 ₺</span></li>
+          <li><span class="n">Omlet</span><span class="lead"></span><span class="p">190 ₺</span></li>
+          <li><span class="n">Kaşarlı omlet</span><span class="lead"></span><span class="p">240 ₺</span></li>
+          <li><span class="n">Patatesli omlet</span><span class="lead"></span><span class="p">240 ₺</span></li>
+          <li><span class="n">Sebzeli omlet</span><span class="lead"></span><span class="p">240 ₺</span></li>
+          <li><span class="n">Sahanda yumurta</span><span class="lead"></span><span class="p">190 ₺</span></li>
+          <li><span class="n">Menemen<span class="d">Mevsim domatesinden</span></span><span class="lead"></span><span class="p">220 ₺</span></li>
+          <li><span class="n">Lüks menemen</span><span class="lead"></span><span class="p">260 ₺</span></li>
+          <li><span class="n">Sucuklu yumurta<span class="d">%100 dana sucuğundan</span></span><span class="lead"></span><span class="p">260 ₺</span></li>
+          <li><span class="n">Lokma tabağı<span class="d">Beyaz peynir, domates, salatalık ile</span></span><span class="lead"></span><span class="p">300 ₺</span></li>
+          <li><span class="n">Yumurtalı ekmek tabağı<span class="d">Beyaz peynir, domates, salatalık ile</span></span><span class="lead"></span><span class="p">300 ₺</span></li>
         </ul>
       </article>
 
       <article class="cat" id="fastfood" style="--c:#F3EDB8">
         <h3>Tost, burger &amp; patso</h3>
         <ul>
-          <li><span class="n">Beyaz peynirli sandviç</span><span class="lead"></span><span class="p">160 ₺</span></li>
-          <li><span class="n">Karışık sandviç<span class="d">Beyaz peynir, salam, kaşar, zeytin ezmesi, ruşeym, domates, salatalık</span></span><span class="lead"></span><span class="p">180 ₺</span></li>
-          <li><span class="n">Kumru</span><span class="lead"></span><span class="p">190 ₺</span></li>
-          <li><span class="n">Kumru menü</span><span class="lead"></span><span class="p">240 ₺</span></li>
+          <li><span class="n">Beyaz peynirli sandviç</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Karışık sandviç<span class="d">Beyaz peynir, salam, kaşar, zeytin ezmesi, acuka, domates, salatalık</span></span><span class="lead"></span><span class="p">200 ₺</span></li>
+          <li><span class="n">Kumru</span><span class="lead"></span><span class="p">220 ₺</span></li>
+          <li><span class="n">Kumru menü</span><span class="lead"></span><span class="p">270 ₺</span></li>
           <li><span class="n">Hamburger</span><span class="lead"></span><span class="p">240 ₺</span></li>
-          <li><span class="n">Hamburger menü</span><span class="lead"></span><span class="p">290 ₺</span></li>
-          <li><span class="n">Caferburger</span><span class="lead"></span><span class="p">290 ₺</span></li>
-          <li><span class="n">Caferburger menü</span><span class="lead"></span><span class="p">340 ₺</span></li>
-          <li><span class="n">Cheeseburger</span><span class="lead"></span><span class="p">260 ₺</span></li>
-          <li><span class="n">Cheeseburger menü</span><span class="lead"></span><span class="p">310 ₺</span></li>
-          <li><span class="n">Kaşarlı tost</span><span class="lead"></span><span class="p">160 ₺</span></li>
-          <li><span class="n">Sucuklu tost<span class="d">%100 dana sucuğu</span></span><span class="lead"></span><span class="p">170 ₺</span></li>
-          <li><span class="n">Karışık tost<span class="d">%100 dana sucuğu</span></span><span class="lead"></span><span class="p">190 ₺</span></li>
-          <li><span class="n">Tost menü<span class="d">%100 dana sucuğu</span></span><span class="lead"></span><span class="p">240 ₺</span></li>
-          <li><span class="n">Cafer tost<span class="d">Sucuk, kaşar, biber, domates, kekik, pul biber</span></span><span class="lead"></span><span class="p">190 ₺</span></li>
-          <li><span class="n">Cafer tost menü</span><span class="lead"></span><span class="p">240 ₺</span></li>
-          <li><span class="n">Cips</span><span class="lead"></span><span class="p">190 ₺</span></li>
-          <li><span class="n">Patso</span><span class="lead"></span><span class="p">120 ₺</span></li>
-          <li><span class="n">Sosisli patso</span><span class="lead"></span><span class="p">160 ₺</span></li>
-          <li><span class="n">Kaşarlı patso</span><span class="lead"></span><span class="p">160 ₺</span></li>
-          <li><span class="n">Sosisli kaşarlı patso</span><span class="lead"></span><span class="p">170 ₺</span></li>
+          <li><span class="n">Hamburger menü</span><span class="lead"></span><span class="p">340 ₺</span></li>
+          <li><span class="n">Caferburger</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Caferburger menü</span><span class="lead"></span><span class="p">390 ₺</span></li>
+          <li><span class="n">Cheeseburger</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Cheeseburger menü</span><span class="lead"></span><span class="p">360 ₺</span></li>
+          <li><span class="n">Kaşarlı tost</span><span class="lead"></span><span class="p">200 ₺</span></li>
+          <li><span class="n">Sucuklu tost<span class="d">%100 dana sucuğu</span></span><span class="lead"></span><span class="p">200 ₺</span></li>
+          <li><span class="n">Karışık tost<span class="d">%100 dana sucuğu</span></span><span class="lead"></span><span class="p">220 ₺</span></li>
+          <li><span class="n">Tost menü</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Cafer tost<span class="d">Sucuk, kaşar, biber, domates, kekik, pul biber</span></span><span class="lead"></span><span class="p">220 ₺</span></li>
+          <li><span class="n">Cafer tost menü</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Cips</span><span class="lead"></span><span class="p">200 ₺</span></li>
+          <li><span class="n">Patso</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Sosisli patso</span><span class="lead"></span><span class="p">190 ₺</span></li>
+          <li><span class="n">Kaşarlı patso</span><span class="lead"></span><span class="p">190 ₺</span></li>
+          <li><span class="n">Sosisli kaşarlı patso</span><span class="lead"></span><span class="p">200 ₺</span></li>
         </ul>
       </article>
 
       <article class="cat" id="makarna" style="--c:var(--rose)">
         <h3>Makarnalar</h3>
         <ul>
-          <li><span class="n">Romano</span><span class="lead"></span><span class="p">290 ₺</span></li>
-          <li><span class="n">Napoliten</span><span class="lead"></span><span class="p">260 ₺</span></li>
-          <li><span class="n">Cheese spagetti</span><span class="lead"></span><span class="p">260 ₺</span></li>
-          <li><span class="n">Bolonez soslu<span class="d">Bildiğin kıymalı makarna</span></span><span class="lead"></span><span class="p">320 ₺</span></li>
-          <li><span class="n">Ton balıklı makarna</span><span class="lead"></span><span class="p">320 ₺</span></li>
-          <li><span class="n">Köri soslu makarna</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Romano</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Napoliten</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Cheese spagetti</span><span class="lead"></span><span class="p">290 ₺</span></li>
+          <li><span class="n">Bolonez soslu<span class="d">Bildiğin kıymalı makarna</span></span><span class="lead"></span><span class="p">340 ₺</span></li>
+          <li><span class="n">Ton balıklı makarna</span><span class="lead"></span><span class="p">340 ₺</span></li>
+          <li><span class="n">Köri soslu makarna</span><span class="lead"></span><span class="p">320 ₺</span></li>
           <li><span class="n">Sade spagetti</span><span class="lead"></span><span class="p">200 ₺</span></li>
         </ul>
       </article>
@@ -292,25 +301,134 @@
       <article class="cat" id="ozel" style="--c:var(--rose)">
         <h3>Cafer'e özel</h3>
         <ul>
-          <li><span class="n">Kaşarlı domates çorbası</span><span class="lead"></span><span class="p">140 ₺</span></li>
-          <li><span class="n">Anne mantısı</span><span class="lead"></span><span class="p">290 ₺</span></li>
-          <li><span class="n">Barbekü soslu tavuk</span><span class="lead"></span><span class="p">300 ₺</span></li>
-          <li><span class="n">Köri soslu tavuk</span><span class="lead"></span><span class="p">300 ₺</span></li>
-          <li><span class="n">Mantar soslu tavuk</span><span class="lead"></span><span class="p">300 ₺</span></li>
-          <li><span class="n">Soya soslu tavuk</span><span class="lead"></span><span class="p">300 ₺</span></li>
-          <li><span class="n">Sweet chili tavuk</span><span class="lead"></span><span class="p">300 ₺</span></li>
-          <li><span class="n">Cafer güveç<span class="d">Dana</span></span><span class="lead"></span><span class="p">490 ₺</span></li>
-          <li><span class="n">Cafer güveç<span class="d">Tavuk</span></span><span class="lead"></span><span class="p">390 ₺</span></li>
+          <li><span class="n">Kaşarlı domates çorbası</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Anne mantısı</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Barbekü soslu tavuk</span><span class="lead"></span><span class="p">350 ₺</span></li>
+          <li><span class="n">Köri soslu tavuk</span><span class="lead"></span><span class="p">350 ₺</span></li>
+          <li><span class="n">Mantar soslu tavuk</span><span class="lead"></span><span class="p">350 ₺</span></li>
+          <li><span class="n">Soya soslu tavuk</span><span class="lead"></span><span class="p">350 ₺</span></li>
+          <li><span class="n">Sweet chili tavuk</span><span class="lead"></span><span class="p">350 ₺</span></li>
         </ul>
       </article>
 
       <article class="cat" id="salata" style="--c:var(--teal)">
         <h3>Salatalar</h3>
         <ul>
-          <li><span class="n">Ton balıklı salata</span><span class="lead"></span><span class="p">280 ₺</span></li>
-          <li><span class="n">Tavuklu salata</span><span class="lead"></span><span class="p">280 ₺</span></li>
-          <li><span class="n">Akdeniz salata</span><span class="lead"></span><span class="p">280 ₺</span></li>
-          <li><span class="n">Mevsim salata</span><span class="lead"></span><span class="p">220 ₺</span></li>
+          <li><span class="n">Ton balıklı salata</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Tavuklu salata</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Akdeniz salata</span><span class="lead"></span><span class="p">320 ₺</span></li>
+          <li><span class="n">Mevsim salata</span><span class="lead"></span><span class="p">240 ₺</span></li>
+        </ul>
+      </article>
+
+      <article class="cat" id="tatli" style="--c:var(--rose)">
+        <h3>Tatlılar</h3>
+        <ul>
+          <li><span class="n">Waffle + çay</span><span class="lead"></span><span class="p">300 ₺</span></li>
+          <li><span class="n">Sufle + çay</span><span class="lead"></span><span class="p">280 ₺</span></li>
+          <li><span class="n">Çikolatalı pasta + çay</span><span class="lead"></span><span class="p">260 ₺</span></li>
+          <li><span class="n">Limonlu cheesecake + çay</span><span class="lead"></span><span class="p">260 ₺</span></li>
+          <li><span class="n">Frambuazlı cheesecake + çay</span><span class="lead"></span><span class="p">260 ₺</span></li>
+          <li><span class="n">Çilekli cheesecake + çay</span><span class="lead"></span><span class="p">260 ₺</span></li>
+        </ul>
+      </article>
+
+      <article class="cat" id="sicak" style="--c:var(--rose)">
+        <h3>Sıcak içecekler</h3>
+        <ul>
+          <li><span class="n">Çay</span><span class="lead"></span><span class="p">30 ₺</span></li>
+          <li><span class="n">Fincan çay</span><span class="lead"></span><span class="p">50 ₺</span></li>
+          <li><span class="n">Toz içecekler</span><span class="lead"></span><span class="p">30 ₺</span></li>
+          <li><span class="n">Türk kahvesi</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Sütlü Türk kahvesi</span><span class="lead"></span><span class="p">100 ₺</span></li>
+          <li><span class="n">Sakızlı Türk kahvesi</span><span class="lead"></span><span class="p">100 ₺</span></li>
+          <li><span class="n">Menengiç</span><span class="lead"></span><span class="p">100 ₺</span></li>
+          <li><span class="n">Nescafe</span><span class="lead"></span><span class="p">130 ₺</span></li>
+          <li><span class="n">Sıcak çikolata</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Aromalı sıcak çikolata</span><span class="lead"></span><span class="p">190 ₺</span></li>
+          <li><span class="n">Beyaz sıcak çikolata</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Süt</span><span class="lead"></span><span class="p">90 ₺</span></li>
+          <li><span class="n">Aromalı süt</span><span class="lead"></span><span class="p">100 ₺</span></li>
+          <li><span class="n">Salep</span><span class="lead"></span><span class="p">160 ₺</span></li>
+          <li><span class="n">Aromalı salep</span><span class="lead"></span><span class="p">170 ₺</span></li>
+          <li><span class="n">Ihlamur</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Yeşil çay</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Papatya çayı</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Ada çayı</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Kuşburnu</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Karışık kış çayı</span><span class="lead"></span><span class="p">150 ₺</span></li>
+        </ul>
+      </article>
+
+      <article class="cat" id="kahve" style="--c:var(--butter)">
+        <h3>Kahveler</h3>
+        <ul>
+          <li><span class="n">Espresso</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Americano</span><span class="lead"></span><span class="p">140 ₺</span></li>
+          <li><span class="n">Macchiato</span><span class="lead"></span><span class="p">170 ₺</span></li>
+          <li><span class="n">Aromalı macchiato</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Latte</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Cappuccino</span><span class="lead"></span><span class="p">150 ₺</span></li>
+          <li><span class="n">Aromalı cappuccino</span><span class="lead"></span><span class="p">160 ₺</span></li>
+          <li><span class="n">Mocha</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Filtre kahve</span><span class="lead"></span><span class="p">140 ₺</span></li>
+          <li><span class="n">Aromalı filtre kahve</span><span class="lead"></span><span class="p">160 ₺</span></li>
+          <li><span class="n">Sütlü filtre kahve</span><span class="lead"></span><span class="p">160 ₺</span></li>
+        </ul>
+      </article>
+
+      <article class="cat wide" id="buzlu" style="--c:#F3EDB8">
+        <h3>Buzlular</h3>
+        <p class="note">Hepsi 160 ₺</p>
+        <ul class="chips">
+          <li>Çilekli frappe</li>
+          <li>Karamel frappe</li>
+          <li>Muz frappe</li>
+          <li>Vanilyalı frappe</li>
+          <li>Kahveli frappe</li>
+          <li>Çikolatalı frappe</li>
+          <li>Böğürtlen frappe</li>
+          <li>Limonlu frozen</li>
+          <li>Muzlu frozen</li>
+          <li>Karadutlu frozen</li>
+          <li>Böğürtlenli frozen</li>
+          <li>Karpuzlu frozen</li>
+          <li>Çilekli frozen</li>
+          <li>Kivili frozen</li>
+          <li>Nane-limon frozen</li>
+          <li>Buzlu kahve</li>
+          <li>Buzlu çikolata</li>
+          <li>Buzlu sütlü kahve</li>
+          <li>Buzlu salep</li>
+          <li>Çarkıfelek</li>
+          <li>Hibiscus</li>
+        </ul>
+      </article>
+
+      <article class="cat wide-half" id="mesrubat" style="--c:var(--teal)">
+        <h3>Meşrubatlar</h3>
+        <ul>
+          <li><span class="n">Pepsi</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Yedigün</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Fruko</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Ice tea</span><span class="lead"></span><span class="p">80 ₺</span></li>
+          <li><span class="n">Şişe meyve suyu</span><span class="lead"></span><span class="p">70 ₺</span></li>
+          <li><span class="n">Şişe Pepsi</span><span class="lead"></span><span class="p">70 ₺</span></li>
+          <li><span class="n">Şişe gazoz çeşitleri</span><span class="lead"></span><span class="p">70 ₺</span></li>
+          <li><span class="n">Şişe Yedigün</span><span class="lead"></span><span class="p">70 ₺</span></li>
+          <li><span class="n">Sade soda</span><span class="lead"></span><span class="p">60 ₺</span></li>
+          <li><span class="n">Meyveli soda</span><span class="lead"></span><span class="p">70 ₺</span></li>
+          <li><span class="n">Su</span><span class="lead"></span><span class="p">25 ₺</span></li>
+          <li><span class="n">Ayran</span><span class="lead"></span><span class="p">25 ₺</span></li>
+          <li><span class="n">Açık ayran</span><span class="lead"></span><span class="p">45 ₺</span></li>
+          <li><span class="n">Otlu ayran</span><span class="lead"></span><span class="p">60 ₺</span></li>
+          <li><span class="n">Sıkma portakal</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Sıkma nar</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Atom sıkma</span><span class="lead"></span><span class="p">180 ₺</span></li>
+          <li><span class="n">Limonata</span><span class="lead"></span><span class="p">120 ₺</span></li>
+          <li><span class="n">Aromalı limonata</span><span class="lead"></span><span class="p">130 ₺</span></li>
+          <li><span class="n">Çörçil</span><span class="lead"></span><span class="p">90 ₺</span></li>
+          <li><span class="n">Soda-limon</span><span class="lead"></span><span class="p">90 ₺</span></li>
         </ul>
       </article>
     </div>
